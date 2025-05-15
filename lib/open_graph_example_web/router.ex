@@ -17,6 +17,7 @@ defmodule OpenGraphExampleWeb.Router do
   scope "/", OpenGraphExampleWeb do
     pipe_through :browser
 
+    live "/", Live.OpenGraphInspector
   end
 
   # Other scopes may use custom stacks.
