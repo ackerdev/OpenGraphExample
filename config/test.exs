@@ -29,3 +29,8 @@ config :phoenix, :plug_init_mode, :runtime
 # Enable helpful, but potentially expensive runtime checks
 config :phoenix_live_view,
   enable_expensive_runtime_checks: true
+
+# Stub req during test
+config :open_graph_example, open_graph_req_options: [
+  plug: {Req.Test, OpenGraphExample.OpenGraphWorker}
+]

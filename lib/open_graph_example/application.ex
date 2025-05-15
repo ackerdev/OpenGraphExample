@@ -15,7 +15,8 @@ defmodule OpenGraphExample.Application do
       # Start a worker by calling: OpenGraphExample.Worker.start_link(arg)
       # {OpenGraphExample.Worker, arg},
       # Start to serve requests, typically the last entry
-      OpenGraphExampleWeb.Endpoint
+      OpenGraphExampleWeb.Endpoint,
+      {Task.Supervisor, name: OpenGraphExample.OpenGraphWorkerSupervisor}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
